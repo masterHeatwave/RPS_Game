@@ -1,2 +1,2 @@
 # RPS_Game
-Rock Paper Scissors Game made with Unity and C#
+Rock Paper Scissors Game logic made with Unity, C# and ASCII symbols.
