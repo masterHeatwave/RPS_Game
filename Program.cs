@@ -220,21 +220,48 @@ Please select a number:
                 else if (Result == GameResult.ComputerWins)
                 {
                     Console.WriteLine("Computer WINS !!! Machines will take over the world...");
-                    break;
                 }
 
                 // User wins
 
-                else
+                else if (Result == GameResult.UserWins)
                 {
                     Console.WriteLine("You WIN !!! Machines will take over another day...");
+                   
+                }
+
+                    System.Threading.Thread.Sleep(900);
+
+                    Console.WriteLine("Do you want to play another round ?");
+
+                    System.Threading.Thread.Sleep(600);
+
+                    Console.WriteLine("Press [y] for yes or [n] for no");
+
+                    var newRound = Console.ReadLine();
+
+                        if (newRound == "y")
+                        {
+                            // Go to Next Round
+                            CurrentRound++;
+                        }
+
+                else if (newRound == "n")
+                {
+                    System.Threading.Thread.Sleep(600);
+
+                    Console.WriteLine("Ok until next time then... bye bye!");
+
+                    System.Environment.Exit(1);
+                }
+
+                else
+                {
+                    Console.WriteLine("Error!...Please type [y] or [n]");
+
                     break;
                 }
-                
-                // Go to Next Round
-                CurrentRound++;
             }
         }
     }
-
 }
